@@ -10,3 +10,4 @@ export default function StudentWork() {
     </div>
   );
 }
+src/exercises/lesson-01/studentWork.jsx
