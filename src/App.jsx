@@ -148,6 +148,19 @@ const todos = [
 function App() {
   const [todoList, setTodoList] = useState(todos);
 
+  function App() {
+  // Start with an empty array
+  const [todoList, setTodoList] = useState([]);
+
+  const addTodo = (todoTitle) => {
+    const newTodo = {
+      id: Date.now(), // Unique ID based on time
+      title: todoTitle
+    };
+    // Update state based on previous state
+    setTodoList(prevTodoList => [newTodo, ...prevTodoList]);
+  };
+
   return (
     <div>
       <h1>Todo List</h1>
