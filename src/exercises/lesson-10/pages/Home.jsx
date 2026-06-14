@@ -41,6 +41,9 @@ export default function Home({ products }) {
             <p style={{ margin: 0 }}>
               <strong>${p.price.toFixed(2)}</strong>
             </p>
+
+            {/* link to the dynamic product route */}
+            <Link to={`/products/${p.id}`}>View details</Link>
           </article>
         ))}
       </div>
